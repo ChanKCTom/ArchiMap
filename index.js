@@ -238,6 +238,23 @@ function draw() {
                         pop();
                     }
                 });
+                if (currentProject) {
+                    // hover show categories on top of the page
+                    push();
+                        rectMode(CENTER);
+                        fill(0,0,0,10);
+                        stroke(125,125,125);
+                        rect(width/2, 40, 300, 60);
+                        stroke(255);
+                        fill(255);
+                        textSize(20);
+                        var txt = currentCategories.join(', ');
+                        if (txt == currentProject.Name) {
+                            txt = "No Categories";
+                        }
+                        text(`${txt}`, width/2, 45);
+                    pop();
+                }
             }
             rect(projects[i].box.position.x, projects[i].box.position.y, rectangle.w, rectangle.h); // draw box
         pop();
