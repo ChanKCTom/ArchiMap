@@ -244,7 +244,7 @@ function draw() {
                         rectMode(CENTER);
                         fill(0,0,0,10);
                         stroke(125,125,125);
-                        rect(width/2, 40, 300, 60);
+                        rect(windowWidth/2, 40, 300, 60);
                         stroke(255);
                         fill(255);
                         textSize(20);
@@ -252,7 +252,7 @@ function draw() {
                         if (txt == currentProject.Name) {
                             txt = "No Categories";
                         }
-                        text(`${txt}`, width/2, 45);
+                        text(`${txt}`, windowWidth/2, 45);
                     pop();
                 }
             }
