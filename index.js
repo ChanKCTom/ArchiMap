@@ -244,13 +244,15 @@ function draw() {
                         rectMode(CENTER);
                         fill(0,0,0,10);
                         stroke(125,125,125);
-                        rect(windowWidth/2, 40, 300, 60);
+                        rect(windowWidth/2, 40, 600, 60);
                         stroke(255);
                         fill(255);
                         textSize(20);
-                        var txt = currentCategories.join(', ');
+                        var txt = currentCategories[0];
                         if (txt == currentProject.Name) {
-                            txt = "No Categories";
+                            txt = "No Category";
+                        } else {
+                            txt = currentCategories.map(category => category + ' Form').join(' + ');
                         }
                         text(`${txt}`, windowWidth/2, 45);
                     pop();
