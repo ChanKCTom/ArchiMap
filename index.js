@@ -93,10 +93,13 @@ function setup() {
         console.log(url);
         window.open(url, '_blank').focus();
     });
+
 }
 
 function draw() {
     background(0,0,0);
+    
+
     cursor(ARROW);
     modal_is_opened = $("#modal_main").data('bs.modal')?._isShown;
 
@@ -124,7 +127,7 @@ function draw() {
     if (!loaded) {
         // still loading
         push();
-        textSize(100);
+        textSize(35);
         text(loadingStr, x-w/2+width/2, y-h/2+height/2,);
         fill(100,100,100,100);
         noStroke();
@@ -135,15 +138,15 @@ function draw() {
     
     // ensure all projects LOADED
 
-    /** Lines */
-    stroke(100);
-    strokeWeight(1);
-    //   point(x-w/2+width/2, y-h/2+height/2); //center point
-    // line(-9999, y-h/2+height/2, +9999, y-h/2+height/2); //horizontal axis
-    // line(x-w/2+width/2, -9999, x-w/2+width/2, +9999); //vertical axis
-    for (var i = -lines_limit; i < lines_limit; i += lines_seperation) { // seperation = 100
-        line(-9999, y-h/2+height/2 + i, +9999, y-h/2+height/2 + i); //horizontal lines 
-    }
+    // /** Lines */
+    // stroke(100);
+    // strokeWeight(1);
+    // //   point(x-w/2+width/2, y-h/2+height/2); //center point
+    // // line(-9999, y-h/2+height/2, +9999, y-h/2+height/2); //horizontal axis
+    // // line(x-w/2+width/2, -9999, x-w/2+width/2, +9999); //vertical axis
+    // for (var i = -lines_limit; i < lines_limit; i += lines_seperation) { // seperation = 100
+    //     line(-9999, y-h/2+height/2 + i, +9999, y-h/2+height/2 + i); //horizontal lines 
+    // }
 
 
     /** Axis Ranges */
@@ -244,8 +247,8 @@ function draw() {
                         rectMode(CENTER);
                         fill(0,0,0,10);
                         stroke(125,125,125);
-                        rect(windowWidth/2, 40, 600, 60);
-                        stroke(255);
+                        rect(windowWidth/2, 40, windowWidth, 80);
+                        stroke(0);
                         fill(255);
                         textSize(20);
                         var txt = currentCategories[0];
@@ -262,7 +265,31 @@ function draw() {
         pop();
     }
     
+    var c1,c2;
+    c1 = color('rgba(0,0,0,1)');
+    c2 = color('rgba(0,0,0,0)')
+    setGradient(c1, c2, 500);
+    
+
+    
+//     push();
+//     fill(0);
+//     stroke(125,125,125);
+//     rect(0, 0, 300, windowHeight);
+// pop();
+
 }
+
+function setGradient(c1, c2, sidebarWidth) {
+    // noprotect
+    noFill();
+    for (var x = 0; x < sidebarWidth; x++) {
+      var inter = map(x, 0, sidebarWidth, 0, 1);
+      var c = lerpColor(c1, c2, inter);
+      stroke(c);
+      line(x,0,x,windowHeight);
+    }
+  }
 
 function mouseDragged() {
     if (modal_is_opened) {
