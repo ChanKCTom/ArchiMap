@@ -48,6 +48,14 @@ a.navlink {
     top: 500;
     left: 100;
 }
+#title {
+    top: 30;
+    left: 30;
+    font-size: 15;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 
 a.navlink:hover {
     color: white;
