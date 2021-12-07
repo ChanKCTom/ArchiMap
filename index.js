@@ -268,7 +268,7 @@ function draw() {
     var c1,c2;
     c1 = color('rgba(0,0,0,1)');
     c2 = color('rgba(0,0,0,0)')
-    setGradient(c1, c2, 500);
+    setGradient(c1, c2, 800);
     
 
     

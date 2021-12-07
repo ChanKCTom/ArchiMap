@@ -3,7 +3,7 @@ var sidebarOffset, rightOffset, boxWidth, boxHeight;
 var img;
 
 function preload() {
-    img = loadImage("./dia/diagram-01.jpg");
+    img = loadImage("./dia/diagram-04.jpg");
 }
 
 function setup() {
@@ -23,7 +23,8 @@ function draw() {
     rightOffset = 150;
     boxWidth = width - sidebarOffset - rightOffset;
     boxHeight = height;
-    text("Archival science for the last 20 years has developed theoretical and conceptual models to provide an infrastructural framework for managing and arranging records. These conceptual ideas relating to appraisal and arrangement of records are geared towards institutional archives such as business and government archives.\n\nA new type of research archive emerged when I started organizing my research in the early stage of my unit work. It is an online ever-expanding archive hosted on a website platform. It started as a necessary organizational tool of architectural precedents for my own expedience. However, it gravitated towards a long-term project which by itself has an additional value, by augmenting it into an archival network of projects by emerging architects. As I searched for books about archival science for the last 20 years, I discovered that they provide a rigid approach to managing an archive, which to a certain extent is applicable to my platform. Yet, some of the theoretical and conceptual ideas collide or even contradict to many of the assumptions that I made when I was making the website.\n\nThis begs the question: Should the definition of archive be changed, loosen, or even broadened? Or is my platform not an archive after all? In the following part, I will try to explain what these theories and concepts are, and which of those work or not work for my platform, and perhaps the most important one, how we can reconcile the middle ground between the conventional institutional framework and the new emerging type of archive.", 450, 110, boxWidth, boxHeight);
-    image(img, 650, 450);
-    img.resize(500,250);
+    image(img, 650, 400);
+    img.resize(600,300);
+    text("Cataloging and Managing\n\nConventionally, different standards provide guidance to archivists for a reference point. “General International Standard Archival Description”, also known as ISAD(G), was one of the commonly used standards, first published by the ICA in 1994. (International Council on Archives, 2000) This standard suggests elements of description, which include a vast array of archival description for cataloguing, such as reference code, title, level of description, name of creator and medium of the unit of description. This helps to create aids for finding for staff to locate contents physically. Each collection will have been allocated a unique accession number, a location and brief details of its provenance, content, covering dates and extent. (Williams, 2006, p.71)\n\nHowever, the source of information is imported from the web through tools like web scraper. The process refers to an automated process implemented using a bot or web crawler. It is a form of copying in which specific data is gathered and copied from the web, typically into a central local database or spreadsheet, for later retrieval or analysis. (Song, 2007) This website, subsequently, uses the imported data to create the metadata of the archive. The data of description and catalogue consist of the following fields: project name, project location, project date, project architect, origin of architect, and education of background of architect. These fundamental fields of information align with the original intent of the archive, which is to establish an archival network of projects by emerging architects.", 450, 110, boxWidth, boxHeight);
+ 
 }
